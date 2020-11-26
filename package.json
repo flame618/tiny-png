@@ -1,0 +1,21 @@
+{
+  "name": "appolo-pkg",
+  "version": "0.0.1",
+  "description": "阿波罗脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mctest": "./bin/start.js"
+  },
+  "author": "machong",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.10",
+    "commander": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  }
+}
