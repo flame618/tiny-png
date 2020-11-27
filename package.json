@@ -1,21 +1,25 @@
 {
-  "name": "appolo-pkg",
-  "version": "0.0.1",
+  "name": "@byted/apollo",
+  "version": "0.0.3",
   "description": "阿波罗脚手架",
-  "main": "index.js",
+  "main": "./app/scripts/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "mctest": "./bin/start.js"
+    "apollo": "./bin/start.js"
   },
   "author": "machong",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^14.14.10",
-    "commander": "^6.2.0"
+    "@ies/gitlab-kit": "^1.0.20",
+    "commander": "^6.2.0",
+    "prettier": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/eslint-parser": "^7.12.1",
+    "@types/node": "^14.14.10",
     "eslint": "^7.14.0"
   }
 }
