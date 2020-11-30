@@ -1,6 +1,6 @@
 {
   "name": "@byted/apollo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "阿波罗脚手架",
   "main": "./app/scripts/index.js",
   "scripts": {
