@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const { initProgram } = require("../app");
+const { initProgram } = require("../app/scripts/index");
 
-console.log("appolo=12");
 initProgram();
