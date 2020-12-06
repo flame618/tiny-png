@@ -1,7 +1,7 @@
 {
-  "name": "@byted/apollo",
+  "name": "node_cli_template",
   "version": "0.1.0",
-  "description": "阿波罗脚手架",
+  "description": "a template project for node cli",
   "main": "./app/scripts/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,6 @@
   "author": "machong",
   "license": "ISC",
   "dependencies": {
-    "@ies/sso-kit": "^1.1.6",
     "commander": "^6.2.0",
     "prettier": "^2.2.0"
   },
