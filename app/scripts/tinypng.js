@@ -8,6 +8,9 @@ const { getRandomIP, getAllImageFiles } = require("./utils/utils");
  * @param {boolean} isRecursive 是否递归遍历出所有文件，只有filePath是文件夹才有效
  */
 async function startTiny(filePath, isRecursive = false) {
+  if (!filePath) {
+    throw new Error("need input a file or directory path, like tiny -f ./test.png or tiny -f ./ -r")
+  }
   if (!fs.existsSync(filePath)) {
     throw new Error("input file or directory does not exist");
   }
