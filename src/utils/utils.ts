@@ -1,16 +1,16 @@
-const { spawn } = require("child_process");
-const { glob } = require("glob");
-const path = require("path");
+import { spawn } from "child_process";
+import path from "path";
+import glob from "glob";
 
 export function excuteX(command: string) {
   return new Promise((resolve) => {
     const child = spawn(command, {
       shell: true
     });
-    child.stdout.on("data", (data: any) => {
+    child.stdout.on("data", (data: string) => {
       console.log(`${data}`);
     });
-    child.stderr.on("data", (data: any) => {
+    child.stderr.on("data", (data: string) => {
       console.error(`${data}`);
     });
     child.on("close", resolve);
@@ -23,16 +23,16 @@ export function getRandomIP() {
     .join(".");
 }
 
-export function getAllImageFiles(directory: any, isRecursive: boolean) {
+export function getAllImageFiles(directory: string, isRecursive: boolean): Promise<string[]> {
   return new Promise((resolve, reject) => {
     const pattern = isRecursive? "**/*.{png,jpg,jpeg}" : "*.{png,jpg,jpeg}";
     glob(pattern, {
       cwd: directory
-    }, (err: any, files: any[]) => {
+    }, (err: any, files: string[]) => {
       if (err) {
         reject(err);
       } else {
-        resolve(files.map((file: any) => path.join(directory, file)));
+        resolve(files.map((file: string) => path.join(directory, file)));
       }
     })
   })
