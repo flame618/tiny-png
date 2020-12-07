@@ -1,18 +1,20 @@
 {
-  "name": "node_cli_template",
+  "name": "tiny-png",
   "version": "0.1.0",
-  "description": "a template project for node cli",
+  "description": "tiny png",
   "main": "./app/scripts/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "apollo": "./bin/start.js"
+    "tiny": "./bin/start.js"
   },
   "author": "machong",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "commander": "^6.2.0",
+    "glob": "^7.1.6",
     "prettier": "^2.2.0"
   },
   "devDependencies": {
