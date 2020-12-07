@@ -1,6 +1,7 @@
+import { startTiny } from "./tinypng";
+
 const program = require("commander");
-const { startTiny } = require("./tinypng");
-const pkg = require("../../package.json");
+const pkg = require("../package.json");
 /**
  * 初始化命令行程序
  */
@@ -9,7 +10,7 @@ function initProgram() {
   program
     .option("-r, --recursive", "是否递归文件夹所有图片")
     .option("-f, --file <file>", "文件名称")
-    .action(async (obj) => {
+    .action(async (obj: any) => {
       console.log(obj.file);
       startTiny(obj.file, obj.recursive);
     });
@@ -17,6 +18,4 @@ function initProgram() {
   program.parse(process.argv);
 }
 
-module.exports = {
-  initProgram
-}
+initProgram();
