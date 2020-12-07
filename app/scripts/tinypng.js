@@ -4,8 +4,8 @@ const { getRandomIP, getAllImageFiles } = require("./utils/utils");
 
 /**
  * 开始压缩图片流程
- * @param {string} filePath 
- * @param {boolean} isRecursive 
+ * @param {string} filePath 要压缩的单个图片路径或者目录路径
+ * @param {boolean} isRecursive 是否递归遍历出所有文件，只有filePath是文件夹才有效
  */
 async function startTiny(filePath, isRecursive = false) {
   if (!fs.existsSync(filePath)) {
@@ -19,12 +19,12 @@ async function startTiny(filePath, isRecursive = false) {
     const promises = [];
     files.forEach(curFile => {
       const curPromise = tinypng(curFile).then(({ 
-          outputSize,
-          inputSize 
-        }) => {
-          totalInputSize += inputSize;
-          totalOutPutSize += outputSize;
-        })
+        outputSize,
+        inputSize 
+      }) => {
+        totalInputSize += inputSize;
+        totalOutPutSize += outputSize;
+      })
       promises.push(curPromise);
     })
     await Promise.all(promises);
