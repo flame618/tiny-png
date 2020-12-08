@@ -1,15 +1,19 @@
 {
   "name": "@byted/tiny-png",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
   "scripts": {
     "build": "rm -rf lib && tsc -b",
-    "test": "echo \"No tests!\" && exit 0"
+    "test": "echo \"No tests!\" && exit 0",
+    "prepublishOnly": "yarn build"
   },
   "bin": {
     "tiny": "./bin/start.js"
   },
+  "files": [
+    "./lib"
+  ],
   "author": "machong",
   "license": "ISC",
   "dependencies": {
