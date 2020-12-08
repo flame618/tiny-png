@@ -1,6 +1,6 @@
 {
   "name": "@byted/tiny-png",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "tiny": "./bin/start.js"
   },
   "files": [
-    "./lib"
+    "./lib",
+    "./bin"
   ],
   "author": "machong",
   "license": "ISC",
