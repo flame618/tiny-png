@@ -1,6 +1,6 @@
 {
   "name": "tiny-png-ex",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
   "scripts": {
@@ -15,7 +15,13 @@
     "./lib",
     "./bin"
   ],
-  "keywords": ["tiny", "png", "compression", "imagemin", "min"],
+  "keywords": [
+    "tiny",
+    "png",
+    "compression",
+    "imagemin",
+    "min"
+  ],
   "author": "machong",
   "license": "ISC",
   "dependencies": {
