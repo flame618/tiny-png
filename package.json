@@ -1,6 +1,6 @@
 {
   "name": "@byted/tiny-png",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
   "scripts": {
