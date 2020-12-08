@@ -1,5 +1,5 @@
 {
-  "name": "@byted/tiny-png",
+  "name": "tiny-png-ex",
   "version": "0.1.9",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
@@ -15,6 +15,7 @@
     "./lib",
     "./bin"
   ],
+  "keywords": ["tiny", "png", "compression", "imagemin", "min"],
   "author": "machong",
   "license": "ISC",
   "dependencies": {
