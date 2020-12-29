@@ -78,7 +78,9 @@ function uploadImage(imagePath: string) {
       }
     }, (res: IncomingMessage) => {
       if (res.statusCode !== 201) {
-        throw new Error(res.statusMessage);
+        // 出现请求错误不结束所有压缩过程，而是给个报错
+        console.error(res.statusMessage);
+        reject(res.statusMessage);
       }
       // 设置返回数据encoding为utf-8
       res.setEncoding("utf-8");
