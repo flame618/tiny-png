@@ -1,5 +1,5 @@
 {
-  "name": "@byted/diny-png",
+  "name": "@byted/tiny-png",
   "version": "0.2.1",
   "description": "tiny png with tinypng platform",
   "main": "./app/scripts/index.js",
