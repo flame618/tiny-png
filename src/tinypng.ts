@@ -81,6 +81,7 @@ function uploadImage(imagePath: string) {
         // 出现请求错误不结束所有压缩过程，而是给个报错
         console.error(res.statusMessage);
         reject(res.statusMessage);
+        return;
       }
       // 设置返回数据encoding为utf-8
       res.setEncoding("utf-8");
