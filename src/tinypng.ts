@@ -112,6 +112,12 @@ function downloadImage(url: string, imagePath: string) {
         "X-Forwarded-For": getRandomIP()
       }
     }, (res: IncomingMessage) => {
+      if (res.statusCode !== 200) {
+        // 出现请求错误不结束所有压缩过程，而是给个报错
+        console.error(res.statusMessage);
+        reject(res.statusMessage);
+        return;
+      }
       res.pipe(fs.createWriteStream(imagePath)).on("finish", () => {
         resolve("finish");
       });
