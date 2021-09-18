@@ -1,7 +1,11 @@
-image: node:latest
+image: node:lts
 
 stages:
   - deploy
+
+before_script:
+  - yarn global add tsc
+  - yarn install
 
 deploy:
   stage: deploy
